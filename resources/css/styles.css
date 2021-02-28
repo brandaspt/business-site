@@ -1,0 +1,626 @@
+/* Global Styles */
+@font-face {
+  font-family: "Krona One";
+  src: url(../fonts/Krona_One/KronaOne-Regular.ttf) format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Krona One";
+  font-size: 16px;
+  text-align: center;
+  background-color: rgb(211, 211, 211);
+}
+
+h1 {
+  text-shadow: 1px 1px 3px rgb(100, 100, 100);
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 10px;
+}
+
+/* Header */
+header {
+  background-color: rgb(94, 94, 94);
+  border-bottom: 2px solid rgb(211, 211, 211);
+  position: fixed;
+  transition: height 0.5s ease;
+  height: 100px;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nav bar */
+header .logo {
+  width: 150px;
+  margin: 10px;
+  box-shadow: none;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.top-nav-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  width: 60%;
+}
+
+.top-nav a {
+  color: rgb(211, 211, 211);
+  text-shadow: 2px 2px 10px black;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  color: rgb(80, 152, 161);
+  background-color: rgb(211, 211, 211);
+  font-family: inherit;
+  box-shadow: 0px 0px 10px black;
+}
+
+/* Nav Burger */
+.top-nav-burger {
+  display: none;
+}
+
+.line {
+  width: 35px;
+  height: 2px;
+  margin: 7px 0;
+  background-color: rgb(211, 211, 211);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Mobile Nav */
+.show-menu {
+  height: 50vh;
+}
+
+.show-menu .top-nav-links {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+}
+
+.show-menu .top-nav-burger {
+  display: block;
+}
+
+.show-menu .line-top {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.show-menu .line-mid {
+  opacity: 0;
+}
+
+.show-menu .line-bot {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Main */
+main {
+  width: 100%;
+  padding-top: 100px;
+}
+
+/* Mission section */
+#mission {
+  background-image: url(../images/missionBG.jpg);
+  background-size: cover;
+  height: 80vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+section#mission h1 {
+  color: rgb(80, 152, 161);
+  background-color: rgb(211, 211, 211);
+  justify-content: center;
+  width: 100%;
+  max-width: 1300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+section#mission p {
+  color: rgb(94, 94, 94);
+  background-color: rgb(211, 211, 211);
+  width: 100%;
+  max-width: 1300px;
+  line-height: 2;
+  justify-content: center;
+  padding: 0 20px 10px;
+}
+
+/* Services section */
+.services-grid {
+  display: grid;
+  grid-template: 100px repeat(7, auto) / repeat(3, 1fr);
+  column-gap: 3vw;
+  row-gap: 15px;
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 1050px;
+  justify-items: center;
+  align-items: flex-start;
+  grid-auto-rows: 50px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: rgb(94, 94, 94);
+  text-shadow: 1px 1px 3px rgb(143, 143, 143);
+  align-self: center;
+  padding-top: 15px;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgb(94, 94, 94);
+}
+
+/* Grid items */
+section#services h1 {
+  grid-area: 2 / 1 / span 1 / span 3;
+  justify-content: center;
+  color: rgb(80, 152, 161);
+  align-self: flex-end;
+  padding-bottom: 10px;
+}
+
+.title-one {
+  grid-area: 3 / 1 / span 1 / span 1;
+}
+
+.img-one {
+  grid-area: 4 / 1 / span 1 / span 1;
+}
+
+.desc-one {
+  grid-area: 5 / 1 / span 1 / span 1;
+}
+
+.title-two {
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+
+.img-two {
+  grid-area: 4 / 2 / span 3 / span 1;
+}
+
+.desc-two {
+  grid-area: 5 / 2 / span 1 / span 1;
+}
+
+.title-three {
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+
+.img-three {
+  grid-area: 4 / 3 / span 3 / span 1;
+}
+
+.desc-three {
+  grid-area: 5 / 3 / span 1 / span 1;
+}
+
+.title-four {
+  grid-area: 6 / 1 / span 1 / span 1;
+}
+
+.img-four {
+  grid-area: 7 / 1 / span 1 / span 1;
+}
+
+.desc-four {
+  grid-area: 8 / 1 / span 1 / span 1;
+}
+
+.title-five {
+  grid-area: 6 / 2 / span 1 / span 1;
+}
+
+.img-five {
+  grid-area: 7 / 2 / span 1 / span 1;
+}
+
+.desc-five {
+  grid-area: 8 / 2 / span 1 / span 1;
+}
+
+.title-six {
+  grid-area: 6 / 3 / span 1 / span 1;
+}
+
+.img-six {
+  grid-area: 7 / 3 / span 1 / span 1;
+}
+
+.desc-six {
+  grid-area: 8 / 3 / span 1 / span 1;
+}
+
+/* The Team Section */
+.team-grid {
+  display: grid;
+  grid-template: 100px repeat(10, auto) / repeat(3, 1fr);
+  column-gap: 3vw;
+  row-gap: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 1050px;
+  margin: auto;
+  align-items: flex-start;
+  justify-items: center;
+}
+
+section#team h1 {
+  grid-area: 2 / 1 / span 1 / span 3;
+  justify-content: center;
+  color: rgb(80, 152, 161);
+  padding-bottom: 40px;
+}
+
+section#team h3 {
+  display: flex;
+  justify-content: center;
+  color: rgb(94, 94, 94);
+  text-shadow: 1px 1px 3px rgb(143, 143, 143);
+  align-self: center;
+}
+
+.boss-img {
+  grid-area: 3 / 2 / span 3 / span 1;
+}
+
+.boss-title {
+  grid-area: 6 / 2 / span 1 / span 1;
+}
+
+.doer-img {
+  grid-area: 7 / 1 / span 3 / span 1;
+  margin-top: 30px;
+}
+
+.doer-title {
+  grid-area: 10 / 1 / span 1 / span 1;
+}
+
+.thinker-img {
+  grid-area: 7 / 2 / span 3 / span 1;
+  margin-top: 30px;
+}
+
+.thinker-title {
+  grid-area: 10 / 2 / span 1 / span 1;
+}
+
+.lazy-img {
+  grid-area: 7 / 3 / span 3 / span 1;
+  margin-top: 30px;
+}
+
+.lazy-title {
+  grid-area: 10 / 3 / span 1 / span 1;
+}
+
+footer {
+  height: 100px;
+  background-color: rgb(94, 94, 94);
+  color: rgb(211, 211, 211);
+  font-family: "Krona One";
+  font-style: italic;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .services-grid {
+    grid-template: 100px repeat(10, auto) / repeat(2, 1fr);
+  }
+
+  section#services h1 {
+    grid-area: 2 / 1 / span 1 / span 2;
+  }
+
+  .title-one {
+    grid-area: 3 / 1 / span 1 / span 1;
+  }
+
+  .img-one {
+    grid-area: 4 / 1 / span 1 / span 1;
+  }
+
+  .desc-one {
+    grid-area: 5 / 1 / span 1 / span 1;
+  }
+
+  .title-two {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
+
+  .img-two {
+    grid-area: 4 / 2 / span 3 / span 1;
+  }
+
+  .desc-two {
+    grid-area: 5 / 2 / span 1 / span 1;
+  }
+
+  .title-three {
+    grid-area: 6 / 1 / span 1 / span 1;
+  }
+
+  .img-three {
+    grid-area: 7 / 1 / span 3 / span 1;
+  }
+
+  .desc-three {
+    grid-area: 8 / 1 / span 1 / span 1;
+  }
+
+  .title-four {
+    grid-area: 6 / 2 / span 1 / span 1;
+  }
+
+  .img-four {
+    grid-area: 7 / 2 / span 1 / span 1;
+  }
+
+  .desc-four {
+    grid-area: 8 / 2 / span 1 / span 1;
+  }
+
+  .title-five {
+    grid-area: 9 / 1 / span 1 / span 1;
+  }
+
+  .img-five {
+    grid-area: 10 / 1 / span 1 / span 1;
+  }
+
+  .desc-five {
+    grid-area: 11 / 1 / span 1 / span 1;
+  }
+
+  .title-six {
+    grid-area: 9 / 2 / span 1 / span 1;
+  }
+
+  .img-six {
+    grid-area: 10 / 2 / span 1 / span 1;
+  }
+
+  .desc-six {
+    grid-area: 11 / 2 / span 1 / span 1;
+  }
+
+  .team-grid {
+    grid-template: 100px repeat(10, auto) / repeat(2, 1fr);
+  }
+
+  section#team h1 {
+    grid-area: 2 / 1 / span 1 / span 2;
+  }
+
+  .boss-img {
+    grid-area: 3 / 1 / span 3 / span 1;
+  }
+
+  .boss-title {
+    grid-area: 6 / 1 / span 1 / span 1;
+  }
+
+  .lazy-img {
+    grid-area: 3 / 2 / span 3 / span 1;
+    margin-top: 0;
+  }
+
+  .lazy-title {
+    grid-area: 6 / 2 / span 1 / span 1;
+  }
+
+  .doer-img {
+    grid-area: 7 / 1 / span 3 / span 1;
+  }
+
+  .doer-title {
+    grid-area: 10 / 1 / span 1 / span 1;
+  }
+
+  .thinker-img {
+    grid-area: 7 / 2 / span 3 / span 1;
+  }
+
+  .thinker-title {
+    grid-area: 10 / 2 / span 1 / span 1;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .top-nav-links {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .top-nav-links {
+    display: none;
+  }
+
+  .top-nav-burger {
+    display: block;
+  }
+
+  .close-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  img {
+    max-width: 400px;
+  }
+
+  .services-grid {
+    grid-template: 100px repeat(20, auto) / repeat(1, 1fr);
+  }
+
+  section#services h1 {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+
+  .title-one {
+    grid-area: 3 / 1 / span 1 / span 1;
+  }
+
+  .img-one {
+    grid-area: 4 / 1 / span 1 / span 1;
+  }
+
+  .desc-one {
+    grid-area: 5 / 1 / span 1 / span 1;
+  }
+
+  .title-two {
+    grid-area: 6 / 1 / span 1 / span 1;
+  }
+
+  .img-two {
+    grid-area: 7 / 1 / span 1 / span 1;
+  }
+
+  .desc-two {
+    grid-area: 8 / 1 / span 1 / span 1;
+  }
+
+  .title-three {
+    grid-area: 9 / 1 / span 1 / span 1;
+  }
+
+  .img-three {
+    grid-area: 10 / 1 / span 1 / span 1;
+  }
+
+  .desc-three {
+    grid-area: 11 / 1 / span 1 / span 1;
+  }
+
+  .title-four {
+    grid-area: 12 / 1 / span 1 / span 1;
+  }
+
+  .img-four {
+    grid-area: 13 / 1 / span 1 / span 1;
+  }
+
+  .desc-four {
+    grid-area: 14 / 1 / span 1 / span 1;
+  }
+
+  .title-five {
+    grid-area: 15 / 1 / span 1 / span 1;
+  }
+
+  .img-five {
+    grid-area: 16 / 1 / span 1 / span 1;
+  }
+
+  .desc-five {
+    grid-area: 17 / 1 / span 1 / span 1;
+  }
+
+  .title-six {
+    grid-area: 18 / 1 / span 1 / span 1;
+  }
+
+  .img-six {
+    grid-area: 19 / 1 / span 1 / span 1;
+  }
+
+  .desc-six {
+    grid-area: 20 / 1 / span 1 / span 1;
+  }
+
+  .team-grid {
+    grid-template: 100px repeat(18, auto) / repeat(1, 1fr);
+  }
+
+  section#team h1 {
+    grid-area: 2 / 1 / span 1 / span 1;
+  }
+
+  .boss-img {
+    grid-area: 3 / 1 / span 3 / span 1;
+  }
+
+  .boss-title {
+    grid-area: 6 / 1 / span 1 / span 1;
+  }
+
+  .lazy-img {
+    grid-area: 7 / 1 / span 3 / span 1;
+    margin-top: 30px;
+  }
+
+  .lazy-title {
+    grid-area: 10 / 1 / span 1 / span 1;
+  }
+
+  .doer-img {
+    grid-area: 11 / 1 / span 3 / span 1;
+  }
+
+  .doer-title {
+    grid-area: 14 / 1 / span 1 / span 1;
+  }
+
+  .thinker-img {
+    grid-area: 15 / 1 / span 3 / span 1;
+    margin-top: 30px;
+  }
+
+  .thinker-title {
+    grid-area: 18 / 1 / span 1 / span 1;
+  }
+}
